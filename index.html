@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <script src="http://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
     <script>    
-        function loadBGBanks() {
+        $(function () {
         $(".btn-b").slice(0, 10).show();
         $("body").on('click touchstart', '.load-more', function (e) {
             e.preventDefault();
@@ -16,10 +17,10 @@
                 $(".load-more").css('visibility', 'hidden');
             }
         });
-        };
+        });
 
 
-        function loadForeignBanks() {
+        $(function () {
         $(".btn-b-f").slice(0, 5).show();
         $("body").on('click touchstart', '.load-more-f', function (e) {
             e.preventDefault();
@@ -28,7 +29,7 @@
                 $(".load-more-f").css('visibility', 'hidden');
             }
         });
-        };
+        });
     </script>
     
     <title>Document</title>
@@ -101,21 +102,21 @@
                     <div class="order-info-separator"></div>
                     <div class="banks-logos">
                         <div class="banks-row">
-                            <button class="btn-b banks-btn Show" onclick="loadBGBanks()"><img class="banks-logo" src="./images/Banka_DSK_logo.jpg" alt="bank-dsk"></img><p class="tooltiptext">Следвайте: <span>1.едно;</span> <span>2. Две;</span> <span>Две; 3. Три;</span></p></button>
-                            <button class="btn-b banks-btn" onclick="loadBGBanks()"><img class="banks-logo" src="./images/Allianz_logo_logotype.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b banks-btn" onclick="loadBGBanks()"><img class="banks-logo" src="./images/Raiffeisen_Bank.svg.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b banks-btn" onclick="loadBGBanks()"><img class="banks-logo" src="./images/unicredit-bulbank-logo-big.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b banks-btn" onclick="loadBGBanks()"><img class="banks-logo" src="./images/ccb-logo.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b banks-btn-row2" onclick="loadBGBanks()"><img class="banks-logo" src="./images/first invetsment bank.jpg" alt="bank-dsk"></img></button>
-                            <button class="btn-b banks-btn-row2" onclick="loadBGBanks()"><img class="banks-logo" src="./images/investbank-logo-600x315.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b banks-btn-row2" onclick="loadBGBanks()"><img class="banks-logo" src="./images/obb.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b banks-btn-row2" onclick="loadBGBanks()"><img class="banks-logo" src="./images/postbank.jpg" alt="bank-dsk"></img></button>
-                            <button class="btn-b banks-btn-row2" onclick="loadBGBanks()"><img class="banks-logo" src="./images/procredit bank.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b banks-btn Show" onclick="loadBGBanks()"><img class="banks-logo" src="./images/Banka_DSK_logo.jpg" alt="bank-dsk"></img></button>
-                            <button class="btn-b banks-btn" onclick="loadBGBanks()"><img class="banks-logo" src="./images/Allianz_logo_logotype.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b banks-btn" onclick="loadBGBanks()"><img class="banks-logo" src="./images/Raiffeisen_Bank.svg.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b banks-btn" onclick="loadBGBanks()"><img class="banks-logo" src="./images/unicredit-bulbank-logo-big.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b banks-btn" onclick="loadBGBanks()"><img class="banks-logo" src="./images/ccb-logo.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn Show" onclick=""><img class="banks-logo" src="./images/Banka_DSK_logo.jpg" alt="bank-dsk"></img><p class="tooltiptext">Следвайте: <span>1.едно;</span> <span>2. Две;</span> <span>Две; 3. Три;</span></p></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/Allianz_logo_logotype.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/Raiffeisen_Bank.svg.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/unicredit-bulbank-logo-big.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/ccb-logo.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn-row2" onclick=""><img class="banks-logo" src="./images/first invetsment bank.jpg" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn-row2" onclick=""><img class="banks-logo" src="./images/investbank-logo-600x315.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn-row2" onclick=""><img class="banks-logo" src="./images/obb.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn-row2" onclick=""><img class="banks-logo" src="./images/postbank.jpg" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn-row2" onclick=""><img class="banks-logo" src="./images/procredit bank.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn Show" onclick=""><img class="banks-logo" src="./images/Banka_DSK_logo.jpg" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/Allianz_logo_logotype.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/Raiffeisen_Bank.svg.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/unicredit-bulbank-logo-big.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/ccb-logo.png" alt="bank-dsk"></img></button>
                         </div>
                         <a href="" class="load-more">Виж още</a>
                     </div>  
@@ -128,16 +129,16 @@
                     <div class="order-info-separator"></div>
                     <div class="banks-logos">
                         <div class="banks-row">
-                            <button class="btn-b-f banks-btn" onclick="loadForeignBanks()"><img class="banks-logo" src="./images/bcr.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b-f banks-btn" onclick="loadForeignBanks()"><img class="banks-logo" src="./images/Raiffeisen_Bank.svg.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b-f banks-btn" onclick="loadForeignBanks()"><img class="banks-logo" src="./images/alpha-logo.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b-f banks-btn" onclick="loadForeignBanks()"><img class="banks-logo" src="./images/bacatransilvania.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b-f banks-btn" onclick="loadForeignBanks()"><img class="banks-logo" src="./images/credit-agricole-logo.jpg" alt="bank-dsk"></img></button>
-                            <button class="btn-b-f banks-btn" onclick="loadForeignBanks()"><img class="banks-logo" src="./images/bcr.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b-f banks-btn" onclick="loadForeignBanks()"><img class="banks-logo" src="./images/Raiffeisen_Bank.svg.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b-f banks-btn" onclick="loadForeignBanks()"><img class="banks-logo" src="./images/alpha-logo.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b-f banks-btn" onclick="loadForeignBanks()"><img class="banks-logo" src="./images/bacatransilvania.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b-f banks-btn" onclick="loadForeignBanks()"><img class="banks-logo" src="./images/credit-agricole-logo.jpg" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/bcr.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/Raiffeisen_Bank.svg.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/alpha-logo.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/bacatransilvania.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/credit-agricole-logo.jpg" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/bcr.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/Raiffeisen_Bank.svg.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/alpha-logo.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/bacatransilvania.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/credit-agricole-logo.jpg" alt="bank-dsk"></img></button>
                         </div>
                         <a href="" class="load-more-f">Виж още</a>
                     </div> 
