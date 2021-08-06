@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script>
+        $(function () {
+        $(".btn-b").slice(0, 10).show();
+        $("body").on('click touchstart', '.load-more', function (e) {
+            e.preventDefault();
+            $(".btn-b:hidden").slice(0, 10).slideDown();
+            if ($(".btn-b:hidden").length == 0) {
+                $(".load-more").css('visibility', 'hidden');
+            }
+        });
+        });
+    </script>
+    <script>
+        $(function () {
+        $(".btn-b-f").slice(0, 5).show();
+        $("body").on('click touchstart', '.load-more-f', function (e) {
+            e.preventDefault();
+            $(".btn-b-f:hidden").slice(0, 5).slideDown();
+            if ($(".btn-b-f:hidden").length == 0) {
+                $(".load-more-f").css('visibility', 'hidden');
+            }
+        });
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-btn">
+            <button class="sign-in" onclick="">Твоя профил</button>
+            <button class="sign-up" onclick="">Регистрирай се</button>
+        </div>
+
+        <section class="pay-options">
+            <div class="section-header">
+                <h3>Избор на плащане</h3>
+            </div>
+            <div class="section-body">
+                <button class="btn" onclick=""><img class="pay-with-card-icon" src="./images/payment-card-icon.png" alt="pay-with-card"></img></button>
+                <button class="btn" onclick=""><img class="pay-with-iris-icon" src="./images/iris_logo.png" alt="pay-with-iris"></img></button>
+            </div>
+        </section>
+        <section class="iris-pay">
+            <div class="section-header">
+                <img src="./images/iris_logo.png" alt="">
+            </div>
+            <div class="iris-pay-body">
+                <div class="order-info">
+                    <h3>Информация за поръчката</h3>
+                    <div class="order-separator"></div>
+                    <div class="order-header">
+                        <p>Стока</p>
+                        <p>описание</p>
+                        <p>Търговец</p>
+                        <p>Брой</p>
+                        <p>Стойност</p>
+                    </div>
+                    <div class="order-info-separator"></div>
+                    <div class="order-body">
+                        <p>001</p>
+                        <p>123456789</p>
+                        <p>Мобидик ЕООД</p>
+                        <p>1</p>
+                        <p>5846 BGN</p>
+                    </div>
+                    <div class="order-info-separator"></div>
+                    <div class="order-body">
+                        <p>002</p>
+                        <p>987654321</p>
+                        <p>Дейзи ООД</p>
+                        <p>1</p>
+                        <p>6246 BGN</p>
+                    </div>
+                    <div class="order-info-separator"></div>
+                    <div class="total-amount">
+                        <p>Обща Сума:</p>
+                        <span>12 092.00 BGN</span>
+                    </div>
+                </div>
+        </section>
+        <section class="select-bank">
+            <div class="section-header">
+                <h3>Избер на банка</h3>
+            </div>
+            <div class="select-bank-body">
+               <div class="search"> <img src="./images/search-icon.png" alt=""> Потърси банка</div>
+               
+               <div class="bg-banks">
+                    <div class="bg-banks-header">
+                        <h4>Банки в България</h4>
+                    </div>
+                    <div class="order-info-separator"></div>
+                    <div class="banks-logos">
+                        <div class="banks-row">
+                            <button class="btn-b banks-btn Show" onclick=""><img class="banks-logo" src="./images/Banka_DSK_logo.jpg" alt="bank-dsk"></img><p class="tooltiptext">Следвайте: <span>1.едно;</span> <span>2. Две;</span> <span>Две; 3. Три;</span></p></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/Allianz_logo_logotype.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/Raiffeisen_Bank.svg.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/unicredit-bulbank-logo-big.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/ccb-logo.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn-row2" onclick=""><img class="banks-logo" src="./images/first invetsment bank.jpg" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn-row2" onclick=""><img class="banks-logo" src="./images/investbank-logo-600x315.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn-row2" onclick=""><img class="banks-logo" src="./images/obb.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn-row2" onclick=""><img class="banks-logo" src="./images/postbank.jpg" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn-row2" onclick=""><img class="banks-logo" src="./images/procredit bank.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn Show" onclick=""><img class="banks-logo" src="./images/Banka_DSK_logo.jpg" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/Allianz_logo_logotype.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/Raiffeisen_Bank.svg.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/unicredit-bulbank-logo-big.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b banks-btn" onclick=""><img class="banks-logo" src="./images/ccb-logo.png" alt="bank-dsk"></img></button>
+                        </div>
+                        <a href="" class="load-more">Виж още</a>
+                    </div>  
+                </div>
+
+                <div class="foreign-banks">
+                    <div class="foreign-banks-header">
+                        <h4>Чуждестранни банки (Румъния и Гърция)</h4>
+                    </div>
+                    <div class="order-info-separator"></div>
+                    <div class="banks-logos">
+                        <div class="banks-row">
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/bcr.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/Raiffeisen_Bank.svg.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/alpha-logo.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/bacatransilvania.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/credit-agricole-logo.jpg" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/bcr.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/Raiffeisen_Bank.svg.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/alpha-logo.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/bacatransilvania.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/credit-agricole-logo.jpg" alt="bank-dsk"></img></button>
+                        </div>
+                        <a href="" class="load-more-f">Виж още</a>
+                    </div> 
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <div class="general-separator"></div>
+
+    <div class="banks-form">
+        <img class="bank-logo" src="./images/Allianz_logo_logotype.png" alt="">
+        <form class="allianz-form">
+            <label for="fname">Телефонен номер:</label>
+            <input type="text" id="phoneNum" name="phoneNum"><br><br>
+            <label for="lname">IBAN:</label>
+            <input type="text" id="iban" name="iban"><br><br>
+        </form>
+      
+        <p>* Моля, напишете Вашия телефонен номер, с който сте регистриран в Allianz банкирането</p>
+        <p>* На Вашия m-token app ще дойде PUSH нотификация. Моля, потвърдете я, за да се добавят Вашите IBAN сметки.</p>
+
+        <div class="banks-pay-choose-btn">
+            <button class="choose-bank-btn">Избор на банка</button>
+            <button class="continue">Продължи</button>
+        </div>
+    </div>
+</body>
+</html>
