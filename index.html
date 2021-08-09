@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="banksButton.js" type="text/javascript"></script>
     
-    <script>    
+    <script> 
+       //Load more function Bulgarian banks   
         $(function () {
         $(".btn-b").slice(0, 10).show();
         $("body").on('click touchstart', '.load-more', function (e) {
@@ -19,7 +21,7 @@
         });
         });
 
-
+        //Load more function Romanian banks
         $(function () {
         $(".btn-b-f").slice(0, 5).show();
         $("body").on('click touchstart', '.load-more-f', function (e) {
@@ -30,17 +32,41 @@
             }
         });
         });
+
+        //Load more function Greece banks
+        $(function () {
+        $(".btn-b-g").slice(0, 5).show();
+        $("body").on('click touchstart', '.load-more-g', function (e) {
+            e.preventDefault();
+            $(".btn-b-g:hidden").slice(0, 5).slideDown();
+            if ($(".btn-b-g:hidden").length == 0) {
+                $(".load-more-g").css('visibility', 'hidden');
+            }
+        });
+        });
+
+        //Show/hide different banks button content
+        $(function(){
+            $('.showSingle').click(function(){
+                $('.targetDiv').hide();
+                $('#div'+$(this).attr('target')).show();
+            });
+        });
+
+
+        //Change active button color
+        $(function(){
+            $('.showSingle').click(function(){
+                $('.showSingle').removeClass('active');
+                $(this).addClass('active');
+            });
+        });         
     </script>
     
     <title>Document</title>
 </head>
-<body>
+<body onload="document.getElementById('defaultOpen').click()">
     <div class="container">
-        <div class="profile-btn">
-            <button class="sign-in" onclick="">Твоя профил</button>
-            <button class="sign-up" onclick="">Регистрирай се</button>
-        </div>
-
         <section class="pay-options">
             <div class="section-header">
                 <h3>Избор на плащане</h3>
@@ -55,30 +81,28 @@
                 <img src="./images/iris_logo.png" alt="">
             </div>
             <div class="iris-pay-body">
+                <div class="profile-btn">
+                    <button class="sign-in" onclick="">Твоя профил в IRIS</button>
+                    <button class="sign-up" onclick="">Регистрирай се в IRIS</button>
+                </div>
                 <div class="order-info">
                     <h3>Информация за поръчката</h3>
                     <div class="order-separator"></div>
                     <div class="order-header">
-                        <p>Стока</p>
                         <p>описание</p>
                         <p>Търговец</p>
-                        <p>Брой</p>
                         <p>Стойност</p>
                     </div>
                     <div class="order-info-separator"></div>
                     <div class="order-body">
-                        <p>001</p>
                         <p>123456789</p>
                         <p>Мобидик ЕООД</p>
-                        <p>1</p>
                         <p>5846 BGN</p>
                     </div>
                     <div class="order-info-separator"></div>
                     <div class="order-body">
-                        <p>002</p>
                         <p>987654321</p>
                         <p>Дейзи ООД</p>
-                        <p>1</p>
                         <p>6246 BGN</p>
                     </div>
                     <div class="order-info-separator"></div>
@@ -95,10 +119,14 @@
             <div class="select-bank-body">
                <div class="search"> <img src="./images/search-icon.png" alt=""> Потърси банка</div>
                
-               <div class="bg-banks">
-                    <div class="bg-banks-header">
-                        <h4>Банки в България</h4>
-                    </div>
+                <div class="choose-banks-btn">
+                    <button id="defaultOpen" class="showSingle" target="1">Банки в България</button>
+                    <button class="showSingle" target="2">Банки в Румъния</button>
+                    <button class="showSingle" target="3">Банки в Гърция</button>
+                </div>
+               
+               
+               <div id="div1" class="targetDiv bg-banks">
                     <div class="order-info-separator"></div>
                     <div class="banks-logos">
                         <div class="banks-row">
@@ -122,21 +150,16 @@
                     </div>  
                 </div>
 
-                <div class="foreign-banks">
-                    <div class="foreign-banks-header">
-                        <h4>Чуждестранни банки (Румъния и Гърция)</h4>
-                    </div>
+                <div id="div2" class="targetDiv foreign-banks">
                     <div class="order-info-separator"></div>
                     <div class="banks-logos">
                         <div class="banks-row">
                             <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/bcr.png" alt="bank-dsk"></img></button>
                             <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/Raiffeisen_Bank.svg.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/alpha-logo.png" alt="bank-dsk"></img></button>
                             <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/bacatransilvania.png" alt="bank-dsk"></img></button>
                             <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/credit-agricole-logo.jpg" alt="bank-dsk"></img></button>
                             <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/bcr.png" alt="bank-dsk"></img></button>
                             <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/Raiffeisen_Bank.svg.png" alt="bank-dsk"></img></button>
-                            <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/alpha-logo.png" alt="bank-dsk"></img></button>
                             <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/bacatransilvania.png" alt="bank-dsk"></img></button>
                             <button class="btn-b-f banks-btn" onclick=""><img class="banks-logo" src="./images/credit-agricole-logo.jpg" alt="bank-dsk"></img></button>
                         </div>
@@ -144,8 +167,24 @@
                     </div> 
                 </div>
 
+                <div id="div3" class="targetDiv foreign-banks">
+                    <div class="order-info-separator"></div>
+                    <div class="banks-logos">
+                        <div class="banks-row">
+                            <button class="btn-b-g banks-btn" onclick=""><img class="banks-logo" src="./images/alpha-logo.png" alt="bank-dsk"></img></button>
+                            <button class="btn-b-g banks-btn" onclick=""><img class="banks-logo" src="./images/National Greece Bank.png" alt="bank-dsk"></img></button>
+                        </div>
+                        <a href="" class="load-more-g">Виж още</a>
+                    </div> 
+                </div>
+
             </div>
         </section>
+        <div class="licens">
+            <a href="https://eb527c6e-f387-4d8b-a5f3-e17983abe728.filesusr.com/ugd/c7ef95_b4085e9e23ee4affb7dc0a61c392a3df.pdf">
+                <span>IRIS Pay-by-Click</span> е услуга предоставена от <span>IRIS Solutions</span>, 
+                лицензирана платежна институция за отворено банкиране съгласно лиценз от БНБ.</a>
+        </div>
     </div>
 
     <div class="general-separator"></div>
@@ -168,8 +207,17 @@
         </div>
     </div>
 
+    <div class="general-separator"></div>
 
+    <div class="success">
+        <img src="./images/success-icon-arrow-icon-removebg-preview.png" alt="success">
+        <div class="success-txt">
+            <h4>Плащането е успешно.</h4>
+            <h4>Благодарим Ви!</h4>
+        </div>   
+    </div>
+    
+</div>
 
-   
 </body>
 </html>
