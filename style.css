@@ -54,6 +54,7 @@ p, span, li {
     font-size: 11px;
 }
 .register-acc, .payment-acc {
+    color: #01C0F4;
     font-weight: 600;
     text-decoration: underline;
 }
