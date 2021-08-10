@@ -39,7 +39,7 @@ p, span, li {
 }
 .btn-b .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 210px;
     background-color: #ffffff;
     color: #666;
     border-radius: 6px;
@@ -50,7 +50,7 @@ p, span, li {
     font-size: 12px;
     text-align: left;
 }
-.tooltiptext span {
+.tooltiptext p {
     font-size: 12px;
 }
 .btn-b:hover, .btn-b-f:hover, .btn-b-g:hover {
