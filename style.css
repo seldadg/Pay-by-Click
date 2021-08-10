@@ -40,7 +40,7 @@ p, span, li {
 .btn-b .tooltiptext {
     visibility: hidden;
     width: 400px;
-    background-color: #ffffff;
+    background-color: #f5f7f9;
     color: #666;
     border-radius: 6px;
     padding: 8px 5px;
@@ -52,6 +52,10 @@ p, span, li {
 }
 .tooltiptext p {
     font-size: 11px;
+}
+.register-acc, .payment-acc {
+    font-weight: 600;
+    text-decoration: underline;
 }
 .btn-b:hover, .btn-b-f:hover, .btn-b-g:hover {
     border: 1px solid #01C0F4;
