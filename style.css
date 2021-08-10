@@ -47,11 +47,11 @@ p, span, li {
     position: absolute;
     z-index: 1;
     border: 1px solid #ededed;
-    font-size: 12px;
+    font-size: 11px;
     text-align: left;
 }
 .tooltiptext p {
-    font-size: 12px;
+    font-size: 11px;
 }
 .btn-b:hover, .btn-b-f:hover, .btn-b-g:hover {
     border: 1px solid #01C0F4;
