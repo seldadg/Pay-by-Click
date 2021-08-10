@@ -39,7 +39,7 @@ p, span, li {
 }
 .btn-b .tooltiptext {
     visibility: hidden;
-    width: 210px;
+    width: 400px;
     background-color: #ffffff;
     color: #666;
     border-radius: 6px;
