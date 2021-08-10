@@ -154,10 +154,13 @@ p, span, li {
     color: #24386D;
 }
 .banks-btn img {
-    width: 150px;
+    width: 100%;
 }
 .banks-btn-row2 img {
-    width: 80px;
+    width: 80%;
+}
+.banks-btn-row3 img {
+    width: 55%;
 }
 .banks-row {
     display: grid;
