@@ -284,7 +284,14 @@ input {
     grid-template-rows: auto;
     justify-content: center;
 }
-
+.add-acc-btn {
+    background: #F69731;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 16px;
+}
 .targetDiv {
     display: none;
 }
@@ -328,6 +335,35 @@ input {
     color: #24386D;
 }
 
+select {
+    /* Reset */
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+    /* Personalize */
+    width: 20em;
+    height: 3em;
+    padding: 0 4em 0 1em;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg)
+      no-repeat right 0.8em center / 1.4em,
+    linear-gradient(to left, #01C0F4 3em, #ffffff 3em);
+    color: #000000;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  select option {
+    color: #000000;
+  }
+  /* Remove focus outline */
+  select option:focus {
+    outline: none;
+  }
+  /* Remove IE arrow */
+  select option::-ms-expand {
+    display: none;
+    
+  }
 
-
-
+ 
